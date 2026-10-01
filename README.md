@@ -197,16 +197,16 @@
         <!-- قسم اللعبة -->
         <div class="game-section" id="gameSection">
             <div class="logo-area">
-                <h1>FLIP</h1>
+                <h1>FLP</h1>
             </div>
-            <h2>تحدي البراند 🎮</h2>
-            <p>اختر الحرف المميز والأساسي في اسم البراند (حرف I) لفتح كود الخصم الحصري!</p>
+            <h2>اكتشف الحرف الناقص 🎮</h2>
+            <p>أكمل الحرف المفقود في الشعار لتفتح كود الخصم الحصري وتدخل عالمنا!</p>
             
             <div class="letters-grid">
-                <button class="letter-btn" onclick="checkLetter('F')">F</button>
-                <button class="letter-btn" onclick="checkLetter('L')">L</button>
-                <button class="letter-btn" onclick="checkLetter('I')">I</button>
-                <button class="letter-btn" onclick="checkLetter('P')">P</button>
+                <button class="letter-btn" onclick="checkChoice('!')">!</button>
+                <button class="letter-btn" onclick="checkChoice('$')">$</button>
+                <button class="letter-btn" onclick="checkChoice('٪')">٪</button>
+                <button class="letter-btn" onclick="checkChoice('I')">I</button>
             </div>
             <div class="error-msg" id="errorMsg"></div>
         </div>
@@ -249,14 +249,14 @@
     </div>
 
     <script>
-        function checkLetter(letter) {
+        function checkChoice(choice) {
             const errorMsg = document.getElementById('errorMsg');
-            if (letter === 'I') {
-                // إخفاء اللعبة وإظهار الهدية بحركة ناعمة
+            if (choice === 'I') {
+                // إخفاء اللعبة وإظهار الهدية
                 document.getElementById('gameSection').style.display = 'none';
                 document.getElementById('rewardSection').style.display = 'block';
             } else {
-                errorMsg.innerText = 'حرف خطأ! حاول مرة أخرى ❌';
+                errorMsg.innerText = 'اختيار خاطئ! حاول مرة أخرى ❌';
                 setTimeout(() => {
                     errorMsg.innerText = '';
                 }, 2000);
